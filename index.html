@@ -43,7 +43,7 @@
       background-size: 36px 36px;
     }
     .glass-card {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
     }
   </style>
@@ -98,19 +98,20 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
           <a href="#home" class="hover:text-blue-700 transition">Home</a>
+          <a href="#umrah-front" class="hover:text-blue-700 transition">Umrah Packages</a>
+          <a href="#visit-visas" class="hover:text-blue-700 transition">Visit Visas</a>
           <a href="#licenses" class="hover:text-blue-700 transition">Licenses</a>
           <a href="#services" class="hover:text-blue-700 transition">Divisions</a>
-          <a href="#visit-visas" class="hover:text-blue-700 transition">Visit Visas</a>
-          <a href="#jobs" class="hover:text-blue-700 transition">Overseas Jobs</a>
+          <a href="#jobs" class="hover:text-blue-700 transition">Jobs</a>
           <a href="#contact" class="hover:text-blue-700 transition">Contact</a>
         </nav>
 
         <!-- Header Action Buttons -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="#jobs" class="text-sm font-bold text-blue-700 hover:bg-blue-50 px-3.5 py-2.5 rounded-xl transition">
-            Submit CV
+          <a href="#umrah-front" class="text-sm font-bold text-blue-700 hover:bg-blue-50 px-3.5 py-2.5 rounded-xl transition">
+            Direct Umrah
           </a>
           <a href="https://wa.me/923416909324" target="_blank" class="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm shadow-blue-600/20 transition flex items-center gap-2">
             <i class="fa-brands fa-whatsapp text-base"></i> Direct Desk
@@ -127,10 +128,10 @@
     <!-- Mobile Menu Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-sky-100 px-4 pt-3 pb-5 space-y-1.5 shadow-xl">
       <a href="#home" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Home</a>
+      <a href="#umrah-front" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Direct Flight Umrah Packages</a>
+      <a href="#visit-visas" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Visit Visa Countries &amp; Famous Places</a>
       <a href="#licenses" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Government Licenses</a>
       <a href="#services" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Our Divisions</a>
-      <a href="#visit-visas" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Visit Visa Countries</a>
-      <a href="#process" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">How We Work</a>
       <a href="#jobs" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Overseas Jobs</a>
       <a href="#contact" class="block py-2.5 px-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50">Office &amp; Timings</a>
       <a href="https://wa.me/923416909324" target="_blank" class="mt-2 w-full bg-blue-600 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2">
@@ -139,14 +140,14 @@
     </div>
   </header>
 
-  <!-- Split-Screen Executive Hero Header -->
-  <section id="home" class="hero-corporate-bg hero-grid-overlay py-14 sm:py-20 lg:py-24 border-b border-blue-200/70">
+  <!-- Split-Screen Executive Hero Header (With Front Umrah Packages) -->
+  <section id="home" class="hero-corporate-bg hero-grid-overlay py-12 sm:py-16 lg:py-20 border-b border-blue-200/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-start">
         
         <!-- Left Content Column (7 cols) -->
         <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 text-blue-800 text-xs font-bold shadow-2xs mb-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 text-blue-800 text-xs font-bold shadow-2xs mb-5">
             <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
             Dual Government Licensed Agency • Toba Tek Singh, Punjab
           </div>
@@ -161,57 +162,126 @@
             </span>
           </h1>
 
-          <p class="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-            Delivering verified Gulf manpower recruitment, legal Protector &amp; visa processing, visit visas across 18 destinations, Umrah packages, and international air ticketing.
+          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            Direct Flight Umrah Packages (14, 21 &amp; 28 Days), Visit Visas across 20 destinations with famous landmarks, international air ticketing, and verified Gulf manpower recruitment.
           </p>
 
           <!-- Primary CTA Row -->
-          <div class="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#visit-visas" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3.5 rounded-xl shadow-md shadow-blue-700/20 transition flex items-center gap-2.5">
-              <i class="fa-solid fa-earth-asia"></i> Explore Visit Visa Countries
+          <div class="mt-7 flex flex-wrap items-center gap-3.5">
+            <a href="#umrah-front" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3.5 rounded-xl shadow-md shadow-blue-700/20 transition flex items-center gap-2.5">
+              <i class="fa-solid fa-kaaba"></i> Direct Umrah (14 / 21 / 28 Days)
             </a>
-            <a href="#licenses" class="bg-white hover:bg-sky-50 border border-blue-200 text-brand-ink font-bold px-6 py-3.5 rounded-xl shadow-2xs transition flex items-center gap-2.5">
-              <i class="fa-solid fa-certificate text-blue-700"></i> Verify Official Licenses
+            <a href="#visit-visas" class="bg-white hover:bg-sky-50 border border-blue-200 text-brand-ink font-bold px-6 py-3.5 rounded-xl shadow-2xs transition flex items-center gap-2.5">
+              <i class="fa-solid fa-earth-asia text-blue-700"></i> Visit Visa Countries
             </a>
           </div>
 
+          <!-- Front Umrah Packages Strip Directly in Upper Section -->
+          <div id="umrah-front" class="mt-8 bg-white/95 rounded-2xl border border-blue-200/90 p-5 shadow-md shadow-blue-900/5">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3.5 border-b border-sky-100">
+              <div class="flex items-center gap-2.5">
+                <span class="w-9 h-9 rounded-xl bg-blue-700 text-white flex items-center justify-center text-base">
+                  <i class="fa-solid fa-plane-departure"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 block">Featured Front Package</span>
+                  <h2 class="text-base sm:text-lg font-extrabold text-brand-ink leading-tight">
+                    Direct Flight Umrah Packages
+                  </h2>
+                </div>
+              </div>
+              <span class="text-xs font-bold bg-sky-100 text-blue-800 px-3 py-1 rounded-full">
+                Non-Stop / Direct Flight
+              </span>
+            </div>
+
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <!-- 14 Days -->
+              <a href="https://wa.me/923416909324?text=Assalam-o-Alaikum%20Golan%20International%2C%20I%20want%20details%20for%20*14%20Days%20Direct%20Flight%20Umrah%20Package*." target="_blank" class="p-3.5 rounded-xl bg-sky-50/80 hover:bg-blue-50 border border-sky-200 hover:border-blue-400 transition block group">
+                <div class="flex items-center justify-between">
+                  <span class="text-base font-extrabold text-blue-900">14 Days</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-blue-600 group-hover:translate-x-0.5 transition"></i>
+                </div>
+                <p class="text-xs font-bold text-slate-700 mt-1">Direct Flight Umrah</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Makkah &amp; Madinah • Visa &amp; Stay</p>
+              </a>
+
+              <!-- 21 Days -->
+              <a href="https://wa.me/923416909324?text=Assalam-o-Alaikum%20Golan%20International%2C%20I%20want%20details%20for%20*21%20Days%20Direct%20Flight%20Umrah%20Package*." target="_blank" class="p-3.5 rounded-xl bg-sky-50/80 hover:bg-blue-50 border border-sky-200 hover:border-blue-400 transition block group">
+                <div class="flex items-center justify-between">
+                  <span class="text-base font-extrabold text-blue-900">21 Days</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-blue-600 group-hover:translate-x-0.5 transition"></i>
+                </div>
+                <p class="text-xs font-bold text-slate-700 mt-1">Direct Flight Umrah</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Makkah &amp; Madinah • Visa &amp; Stay</p>
+              </a>
+
+              <!-- 28 Days -->
+              <a href="https://wa.me/923416909324?text=Assalam-o-Alaikum%20Golan%20International%2C%20I%20want%20details%20for%20*28%20Days%20Direct%20Flight%20Umrah%20Package*." target="_blank" class="p-3.5 rounded-xl bg-sky-50/80 hover:bg-blue-50 border border-sky-200 hover:border-blue-400 transition block group">
+                <div class="flex items-center justify-between">
+                  <span class="text-base font-extrabold text-blue-900">28 Days</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-blue-600 group-hover:translate-x-0.5 transition"></i>
+                </div>
+                <p class="text-xs font-bold text-slate-700 mt-1">Direct Flight Umrah</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Full Month Stay • Direct Flight</p>
+              </a>
+            </div>
+          </div>
+
           <!-- Key Trust Metrics Strip -->
-          <div class="mt-10 grid grid-cols-3 gap-4 pt-7 border-t border-blue-200/80 max-w-xl">
+          <div class="mt-7 grid grid-cols-3 gap-4 pt-5 border-t border-blue-200/80 max-w-xl">
             <div>
-              <span class="block text-xl sm:text-2xl font-extrabold text-blue-800">2016</span>
-              <span class="text-xs font-semibold text-slate-600">OEP Established</span>
+              <span class="block text-xl sm:text-2xl font-extrabold text-blue-800">14/21/28</span>
+              <span class="text-xs font-semibold text-slate-600">Direct Umrah Days</span>
             </div>
             <div>
               <span class="block text-xl sm:text-2xl font-extrabold text-blue-800">2 Licenses</span>
               <span class="text-xs font-semibold text-slate-600">OEP &amp; DTS Approved</span>
             </div>
             <div>
-              <span class="block text-xl sm:text-2xl font-extrabold text-blue-800">18 Countries</span>
-              <span class="text-xs font-semibold text-slate-600">Visit Visa Destinations</span>
+              <span class="block text-xl sm:text-2xl font-extrabold text-blue-800">20 Countries</span>
+              <span class="text-xs font-semibold text-slate-600">Visit Visa List</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Visual Corporate Credential Card (5 cols) -->
+        <!-- Right Visual Corporate Credential & Direct Umrah Card (5 cols) -->
         <div class="lg:col-span-5">
           <div class="glass-card rounded-3xl border border-blue-200/90 shadow-xl shadow-blue-900/5 overflow-hidden">
-            <!-- Corporate Aviation / Global Header Banner -->
+            <!-- Corporate Aviation / Makkah-Global Header Banner -->
             <div class="relative h-44 bg-gradient-to-r from-sky-600 to-blue-800 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80" 
-                alt="International Aviation and Global Travel" 
+                alt="Direct Flight Umrah and International Travel" 
                 class="w-full h-full object-cover opacity-35 mix-blend-luminosity"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-blue-950/85 via-blue-900/40 to-transparent p-6 flex flex-col justify-end">
-                <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300">Official Corporate Profile</span>
-                <h2 class="text-white font-extrabold text-lg leading-snug mt-0.5">
-                  Authorized Manpower &amp; Travel Desk
-                </h2>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300">Direct Flight Umrah &amp; Licenses</span>
+                <h3 class="text-white font-extrabold text-lg leading-snug mt-0.5">
+                  14, 21 &amp; 28 Days Umrah • Authorized Desk
+                </h3>
               </div>
             </div>
 
-            <!-- Credential Summary Inside Card -->
+            <!-- Credential & Package Summary Inside Card -->
             <div class="p-6 space-y-4">
+              <!-- Direct Umrah Quick Box -->
+              <div class="p-4 rounded-2xl bg-blue-50/90 border border-blue-200 flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-blue-700 text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fa-solid fa-kaaba"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-bold uppercase text-blue-700">Direct Flight Umrah</span>
+                    <p class="font-extrabold text-brand-ink text-sm">14 Days • 21 Days • 28 Days</p>
+                    <p class="text-xs text-slate-600 mt-0.5">Direct flight packages available now</p>
+                  </div>
+                </div>
+                <span class="text-[11px] font-bold text-blue-800 bg-white border border-blue-200 px-2.5 py-0.5 rounded-full">
+                  Direct
+                </span>
+              </div>
+
               <!-- OEP Mini Badge -->
               <div class="p-4 rounded-2xl bg-sky-50/90 border border-sky-200/80 flex items-start justify-between gap-3">
                 <div class="flex items-start gap-3">
@@ -279,26 +349,26 @@
     </div>
   </div>
 
-  <!-- Visit Visa Destinations Showcase (18 Countries with Famous Places & Photos) -->
+  <!-- Visit Visa Destinations Showcase (Countries List + Famous Places + Photos) -->
   <section id="visit-visas" class="py-16 sm:py-24 bg-gradient-to-b from-sky-50/80 to-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
         <div>
           <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-sky-100 px-3.5 py-1.5 rounded-full">
             DTS Licensed Travel Desk (Lic # 12729)
           </span>
           <h2 class="mt-3 text-2xl sm:text-4xl font-extrabold text-brand-ink">
-            Visit Visa Destinations &amp; Famous Landmarks
+            Visit Visa Countries &amp; Famous Places
           </h2>
           <p class="mt-2 text-slate-600 text-sm sm:text-base max-w-2xl">
-            We process visit &amp; tourist visas across Gulf, Asian, and African destinations. Click any country to inquire directly on WhatsApp.
+            Complete list of visit visa countries we handle along with their famous places and photos. Filter by region or click any country to inquire on WhatsApp.
           </p>
         </div>
 
         <!-- Region Filter Tabs -->
         <div class="flex flex-wrap gap-2" id="region-filters">
           <button type="button" data-region="all" class="region-btn active px-4 py-2 rounded-xl text-xs font-bold bg-blue-700 text-white shadow-2xs transition">
-            All Countries (18)
+            All Countries (20)
           </button>
           <button type="button" data-region="gulf" class="region-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-sky-200 hover:bg-sky-50 transition">
             Gulf &amp; Middle East (6)
@@ -307,12 +377,24 @@
             Asia (5)
           </button>
           <button type="button" data-region="africa" class="region-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-sky-200 hover:bg-sky-50 transition">
-            Africa (7)
+            Africa (9)
           </button>
         </div>
       </div>
 
-      <!-- Countries Grid (Populated cleanly via JS with guaranteed fallback SVG artwork) -->
+      <!-- Complete Quick-Reference List of Visit Visa Countries & Famous Places -->
+      <div class="bg-white rounded-2xl border border-sky-200/90 p-5 sm:p-6 mb-10 shadow-2xs">
+        <div class="flex items-center justify-between gap-2 pb-3 mb-4 border-b border-sky-100">
+          <h3 class="text-sm sm:text-base font-extrabold text-brand-ink flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-blue-700"></i>
+            Visit Visa Countries &amp; Famous Places Directory
+          </h3>
+          <span class="text-xs font-semibold text-blue-700">20 Destinations</span>
+        </div>
+        <div id="country-famous-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-2.5 text-xs sm:text-sm"></div>
+      </div>
+
+      <!-- Countries Photo Cards Grid -->
       <div id="destinations-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
     </div>
   </section>
@@ -453,11 +535,11 @@
           <ul class="mt-6 space-y-4 text-sm text-slate-700">
             <li class="flex items-start gap-3">
               <i class="fa-solid fa-circle-check text-sky-600 mt-1"></i>
-              <span><strong>Visit Visas &amp; Air Ticketing:</strong> Visit visa file assistance and competitive air fares across 18 destinations.</span>
+              <span><strong>Direct Flight Umrah Packages:</strong> 14 Days, 21 Days, and 28 Days direct flight Umrah packages with visa, accommodation, and support.</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fa-solid fa-circle-check text-sky-600 mt-1"></i>
-              <span><strong>Umrah &amp; Ziyarat Packages:</strong> Tailored economy and executive Umrah packages with visa, hotel accommodation, and transport.</span>
+              <span><strong>Visit Visas &amp; Air Ticketing:</strong> Visit visa assistance and air tickets across 20 Gulf, Asian, and African destinations.</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fa-solid fa-circle-check text-sky-600 mt-1"></i>
@@ -481,7 +563,7 @@
         <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-100">
           <span class="w-9 h-9 rounded-xl bg-blue-700 text-white font-extrabold text-sm flex items-center justify-center mb-4">01</span>
           <h3 class="font-bold text-brand-ink text-base">Registration &amp; Screening</h3>
-          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Submit your passport copy, CV, or visit visa travel plan for consultation.</p>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Submit your passport copy, CV, Umrah dates, or visit visa travel plan for consultation.</p>
         </div>
         <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-100">
           <span class="w-9 h-9 rounded-xl bg-blue-700 text-white font-extrabold text-sm flex items-center justify-center mb-4">02</span>
@@ -491,12 +573,12 @@
         <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-100">
           <span class="w-9 h-9 rounded-xl bg-blue-700 text-white font-extrabold text-sm flex items-center justify-center mb-4">03</span>
           <h3 class="font-bold text-brand-ink text-base">Medical &amp; Visa Stamping</h3>
-          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Approved medical processing, embassy stamping, or electronic visit visa issuance.</p>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Approved medical processing, embassy stamping, or electronic visit/Umrah visa issuance.</p>
         </div>
         <div class="p-6 rounded-2xl bg-sky-50/60 border border-sky-100">
           <span class="w-9 h-9 rounded-xl bg-blue-700 text-white font-extrabold text-sm flex items-center justify-center mb-4">04</span>
           <h3 class="font-bold text-brand-ink text-base">Protector &amp; Flight</h3>
-          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Official Bureau Protectorate endorsement for workers and confirmed air tickets.</p>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Official Bureau Protectorate endorsement for workers and confirmed direct/international tickets.</p>
         </div>
       </div>
     </div>
@@ -522,7 +604,7 @@
           <div class="text-center md:text-left">
             <h3 class="text-xl font-extrabold text-brand-ink">New Verified Demands Coming Soon</h3>
             <p class="text-sm text-slate-600 mt-1">
-              No active job listings are currently published on this page. Submit your trade/profession or visit visa inquiry below so our team can reach out.
+              No active job listings are currently published on this page. Submit your trade/profession, Direct Umrah package (14/21/28 Days), or visit visa inquiry below.
             </p>
           </div>
         </div>
@@ -540,15 +622,15 @@
           <div>
             <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Inquiry Category *</label>
             <select id="cand-type" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 text-sm focus:bg-white focus:outline-none focus:border-blue-600">
-              <option value="Overseas Employment / Job Registration">Overseas Employment / Job Registration</option>
+              <option value="Direct Flight Umrah Package (14 / 21 / 28 Days)">Direct Flight Umrah Package (14 / 21 / 28 Days)</option>
               <option value="Visit Visa Inquiry">Visit Visa Inquiry</option>
+              <option value="Overseas Employment / Job Registration">Overseas Employment / Job Registration</option>
               <option value="Air Ticket / Travel Inquiry">Air Ticket / Travel Inquiry</option>
-              <option value="Umrah Package Inquiry">Umrah Package Inquiry</option>
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Trade / Profession or Visit Country</label>
-            <input type="text" id="cand-trade" placeholder="e.g. Electrician, Dubai, Malaysia, Kenya" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 text-sm focus:bg-white focus:outline-none focus:border-blue-600" />
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Trade / Umrah Days / Visit Country</label>
+            <input type="text" id="cand-trade" placeholder="e.g. 21 Days Umrah, Dubai, Malaysia, Electrician" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 text-sm focus:bg-white focus:outline-none focus:border-blue-600" />
           </div>
           <div class="sm:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
             <p class="text-xs text-slate-500">
@@ -749,7 +831,7 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // 18 Visit Visa Destinations with Famous Landmarks & Photos
+    // Visit Visa Countries with Famous Landmarks & Photos
     const visitDestinations = [
       {
         country: "Saudi Arabia",
@@ -913,10 +995,6 @@
       }
     ];
 
-    // Note: Gulf = 6 (Saudi Arabia, Dubai UAE, Muscat Oman, Bahrain, Kuwait, Qatar)
-    // Asia = 5 (Indonesia, Thailand, Malaysia, Sri Lanka, Singapore)
-    // Africa = 9 (Ethiopia, Kenya, Uganda, Benin, Cote d'Ivoire, Madagascar, Senegal, Sierra Leone, Nigeria) -> Total 20 countries
-
     function getFallbackSvg(countryName, landmarkName) {
       const safeCountry = countryName.replace(/&/g, '&amp;');
       const safePlace = landmarkName.replace(/&/g, '&amp;');
@@ -926,10 +1004,24 @@
 
     function renderDestinations(filterRegion = "all") {
       const grid = document.getElementById("destinations-grid");
+      const listBox = document.getElementById("country-famous-list");
       const filtered = filterRegion === "all"
         ? visitDestinations
         : visitDestinations.filter(item => item.region === filterRegion);
 
+      // Update directory list of countries & famous places
+      listBox.innerHTML = filtered.map((dest, idx) => `
+        <div class="flex items-start gap-2 py-1.5 border-b border-slate-100">
+          <span class="font-extrabold text-blue-700 shrink-0">${idx + 1}.</span>
+          <div>
+            <span class="font-extrabold text-brand-ink">${dest.flag} ${dest.country}</span>
+            <span class="text-slate-400 mx-1">&mdash;</span>
+            <span class="text-slate-600 font-medium">${dest.landmark}</span>
+          </div>
+        </div>
+      `).join("");
+
+      // Update photo cards grid
       grid.innerHTML = filtered.map(dest => {
         const fallbackSrc = getFallbackSvg(dest.country, dest.landmark);
         const waText = encodeURIComponent(`Assalam-o-Alaikum Golan International,\nI want Visit Visa information for *${dest.country}* (${dest.landmark}).`);
@@ -976,7 +1068,6 @@
       }).join("");
     }
 
-    // Update filter button counts accurately (6 Gulf, 5 Asia, 9 Africa, 20 Total)
     const buttons = document.querySelectorAll(".region-btn");
     if (buttons.length >= 4) {
       buttons[0].textContent = "All Countries (20)";
@@ -1024,4 +1115,25 @@
       // Open 09:00 AM (540) to 06:00 PM (1080)
       if (totalMins >= 540 && totalMins < 1080) {
         badge.textContent = 'Open Now';
-        badge.className = 'text-xs font-bold px-3 py-1 rounded-full bg-blue
+        badge.className = 'text-xs font-bold px-3 py-1 rounded-full bg-blue-700 text-white';
+      } else {
+        badge.textContent = 'Closed Now';
+        badge.className = 'text-xs font-bold px-3 py-1 rounded-full bg-slate-200 text-slate-700';
+      }
+    }
+    updateOfficeStatus();
+
+    // Send Candidate / Inquiry Form directly to Official WhatsApp
+    document.getElementById('candidate-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('cand-name').value.trim();
+      const phone = document.getElementById('cand-phone').value.trim();
+      const type = document.getElementById('cand-type').value;
+      const trade = document.getElementById('cand-trade').value.trim() || 'Not specified';
+
+      const message = `Assalam-o-Alaikum Golan International,%0A%0A*New Website Registration / Inquiry*%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Category:* ${encodeURIComponent(type)}%0A*Details:* ${encodeURIComponent(trade)}`;
+      window.open(`https://wa.me/923416909324?text=${message}`, '_blank');
+    });
+  </script>
+</body>
+</html>
