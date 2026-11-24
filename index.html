@@ -928,46 +928,47 @@
       window.open(`https://wa.me/923453326318?text=${message}`, '_blank');
     });
 const pattiAirlines = [
-  { name: "PIA", code: "PK", bg: "from-emerald-600 to-teal-700", icon: "fa-plane-departure" },
-  { name: "AirSial", code: "PF", bg: "from-sky-500 to-blue-700", icon: "fa-plane" },
-  { name: "Fly Jinnah", code: "9P", bg: "from-orange-500 to-amber-600", icon: "fa-plane-up" },
-  { name: "Airblue", code: "PA", bg: "from-blue-600 to-sky-700", icon: "fa-plane-departure" },
-  { name: "Emirates", code: "EK", bg: "from-red-600 to-rose-800", icon: "fa-plane-departure" },
-  { name: "Qatar Airways", code: "QR", bg: "from-purple-800 to-fuchsia-950", icon: "fa-plane-departure" },
-  { name: "Saudia", code: "SV", bg: "from-emerald-700 to-green-900", icon: "fa-plane-departure" },
-  { name: "Etihad Airways", code: "EY", bg: "from-amber-700 to-stone-900", icon: "fa-plane-departure" },
-  { name: "flydubai", code: "FZ", bg: "from-sky-600 to-cyan-800", icon: "fa-plane" },
-  { name: "Gulf Air", code: "GF", bg: "from-blue-800 to-slate-900", icon: "fa-plane-departure" },
-  { name: "Oman Air", code: "WY", bg: "from-slate-700 to-blue-900", icon: "fa-plane-departure" },
-  { name: "Air Arabia", code: "G9", bg: "from-red-600 to-orange-700", icon: "fa-plane" },
-  { name: "Kuwait Airways", code: "KU", bg: "from-blue-700 to-indigo-900", icon: "fa-plane-departure" },
-  { name: "Jazeera Airways", code: "J9", bg: "from-rose-600 to-red-800", icon: "fa-plane" },
-  { name: "flynas", code: "XY", bg: "from-teal-600 to-emerald-800", icon: "fa-plane" },
-  { name: "Turkish Airlines", code: "TK", bg: "from-rose-700 to-red-900", icon: "fa-plane-departure" },
-  { name: "British Airways", code: "BA", bg: "from-blue-900 to-red-800", icon: "fa-plane-departure" },
-  { name: "Virgin Atlantic", code: "VS", bg: "from-red-700 to-pink-800", icon: "fa-plane-departure" },
-  { name: "Batik Air", code: "OD", bg: "from-indigo-600 to-blue-800", icon: "fa-plane-departure" },
-  { name: "Thai Airways", code: "TG", bg: "from-purple-700 to-pink-700", icon: "fa-plane-departure" },
-  { name: "Singapore Airlines", code: "SQ", bg: "from-amber-600 to-blue-900", icon: "fa-plane-departure" },
-  { name: "China Southern", code: "CZ", bg: "from-sky-600 to-blue-800", icon: "fa-plane-departure" }
+  { name: "PIA", sub: "Pakistan International", code: "PK", color: "text-emerald-700", badgeBg: "bg-emerald-600", icon: "fa-plane-departure" },
+  { name: "AirSial", sub: "Pakistani Airline", code: "PF", color: "text-sky-700", badgeBg: "bg-sky-600", icon: "fa-plane" },
+  { name: "Fly Jinnah", sub: "Domestic & Int'l", code: "9P", color: "text-orange-600", badgeBg: "bg-orange-500", icon: "fa-plane-up" },
+  { name: "Airblue", sub: "Domestic & Gulf", code: "PA", color: "text-blue-700", badgeBg: "bg-blue-600", icon: "fa-plane-departure" },
+  { name: "Emirates", sub: "UAE & Global", code: "EK", color: "text-red-700", badgeBg: "bg-red-600", icon: "fa-plane-departure" },
+  { name: "Qatar Airways", sub: "Doha & Global", code: "QR", color: "text-purple-900", badgeBg: "bg-purple-800", icon: "fa-plane-departure" },
+  { name: "Saudia", sub: "KSA & Umrah", code: "SV", color: "text-emerald-800", badgeBg: "bg-emerald-700", icon: "fa-plane-departure" },
+  { name: "Etihad Airways", sub: "Abu Dhabi", code: "EY", color: "text-amber-800", badgeBg: "bg-amber-700", icon: "fa-plane-departure" },
+  { name: "flydubai", sub: "Dubai Corridor", code: "FZ", color: "text-sky-700", badgeBg: "bg-sky-600", icon: "fa-plane" },
+  { name: "Gulf Air", sub: "Bahrain & Gulf", code: "GF", color: "text-blue-900", badgeBg: "bg-blue-800", icon: "fa-plane-departure" },
+  { name: "Oman Air", sub: "Muscat & Gulf", code: "WY", color: "text-slate-800", badgeBg: "bg-slate-700", icon: "fa-plane-departure" },
+  { name: "Air Arabia", sub: "Sharjah & Gulf", code: "G9", color: "text-red-700", badgeBg: "bg-red-600", icon: "fa-plane" },
+  { name: "Kuwait Airways", sub: "Kuwait", code: "KU", color: "text-blue-800", badgeBg: "bg-blue-700", icon: "fa-plane-departure" },
+  { name: "Jazeera Airways", sub: "Kuwait & Gulf", code: "J9", color: "text-rose-700", badgeBg: "bg-rose-600", icon: "fa-plane" },
+  { name: "flynas", sub: "Saudi Arabia", code: "XY", color: "text-teal-700", badgeBg: "bg-teal-600", icon: "fa-plane" },
+  { name: "Turkish Airlines", sub: "Istanbul & Global", code: "TK", color: "text-rose-800", badgeBg: "bg-rose-700", icon: "fa-plane-departure" },
+  { name: "British Airways", sub: "UK & Europe", code: "BA", color: "text-blue-950", badgeBg: "bg-blue-900", icon: "fa-plane-departure" },
+  { name: "Virgin Atlantic", sub: "UK & Global", code: "VS", color: "text-red-800", badgeBg: "bg-red-700", icon: "fa-plane-departure" },
+  { name: "Batik Air", sub: "Malaysia & Asia", code: "OD", color: "text-indigo-800", badgeBg: "bg-indigo-600", icon: "fa-plane-departure" },
+  { name: "Thai Airways", sub: "Bangkok & Asia", code: "TG", color: "text-purple-800", badgeBg: "bg-purple-700", icon: "fa-plane-departure" },
+  { name: "Singapore Airlines", sub: "Singapore", code: "SQ", color: "text-amber-800", badgeBg: "bg-amber-600", icon: "fa-plane-departure" },
+  { name: "China Southern", sub: "China & Asia", code: "CZ", color: "text-sky-800", badgeBg: "bg-sky-600", icon: "fa-plane-departure" }
 ];
 
 function renderHomePatti() {
   const el = document.getElementById('home-airlines-patti');
   if (!el) return;
   const html = pattiAirlines.map(a => `
-    <a href="airlines.html" class="inline-flex items-center gap-2 bg-sky-50/90 hover:bg-blue-50 border border-sky-200/70 px-3.5 py-1.5 rounded-full shrink-0 transition">
-      <span class="w-6 h-6 rounded-full bg-gradient-to-br ${a.bg} text-white flex items-center justify-center text-[10px] font-extrabold">
+    <a href="airlines.html" class="inline-flex items-center gap-3 bg-white hover:bg-sky-50/70 border border-slate-200/90 px-4 py-2 rounded-xl shadow-2xs shrink-0 transition">
+      <span class="w-8 h-8 rounded-lg ${a.badgeBg} text-white flex items-center justify-center text-sm shrink-0">
         <i class="fa-solid ${a.icon}"></i>
       </span>
-      <span class="text-xs font-extrabold text-brand-ink whitespace-nowrap">${a.name}</span>
+      <span class="leading-tight text-left whitespace-nowrap">
+        <span class="block text-sm font-extrabold ${a.color}">${a.name}</span>
+        <span class="block text-[10px] font-semibold text-slate-500">${a.sub}</span>
+      </span>
     </a>
   `).join('');
   el.innerHTML = html + html;
 }
 renderHomePatti();
-}
-
   </script>
 </body>
 </html>
