@@ -64,6 +64,18 @@
       backdrop-filter: blur(14px);
       box-shadow: 0 12px 32px -12px rgba(37, 99, 235, 0.12);
     }
+    @keyframes tickerMove {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.airline-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerMove 26s linear infinite;
+}
+.airline-ticker-track:hover {
+  animation-play-state: paused;
+}
   </style>
 </head>
 <body class="bg-[#F7FAFF] text-brand-ink font-sans antialiased selection:bg-sky-600 selection:text-white">
@@ -311,7 +323,16 @@
       </div>
     </div>
   </section>
-
+<div class="bg-white border-b border-sky-100 py-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-3">
+    <a href="airlines.html" class="shrink-0 text-xs font-extrabold uppercase tracking-wider bg-sky-100 hover:bg-blue-600 text-blue-800 hover:text-white px-3.5 py-1.5 rounded-full transition">
+      <i class="fa-solid fa-plane mr-1"></i> Air Ticketing
+    </a>
+    <div class="overflow-hidden flex-1">
+      <div class="airline-ticker-track items-center gap-2.5" id="home-airlines-patti"></div>
+    </div>
+  </div>
+</div>
   <!-- Gulf Regions Strip -->
   <div class="bg-white border-b border-sky-100 py-5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -906,6 +927,31 @@
       const message = `Assalam-o-Alaikum Golan International,%0A%0A*New Website Inquiry*%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Category:* ${encodeURIComponent(type)}%0A*Details:* ${encodeURIComponent(trade)}`;
       window.open(`https://wa.me/923453326318?text=${message}`, '_blank');
     });
+    const pattiAirlines = [
+  { name: "PIA", code: "PK", bg: "from-emerald-600 to-teal-700" },
+  { name: "AirSial", code: "PF", bg: "from-sky-500 to-blue-700" },
+  { name: "SereneAir", code: "ER", bg: "from-blue-600 to-indigo-700" },
+  { name: "Emirates", code: "EK", bg: "from-red-600 to-rose-800" },
+  { name: "Qatar Airways", code: "QR", bg: "from-purple-800 to-fuchsia-950" },
+  { name: "Saudia", code: "SV", bg: "from-emerald-700 to-green-900" },
+  { name: "Etihad Airways", code: "EY", bg: "from-amber-700 to-stone-900" },
+  { name: "flydubai", code: "FZ", bg: "from-sky-600 to-cyan-800" },
+  { name: "Gulf Air", code: "GF", bg: "from-blue-800 to-slate-900" },
+  { name: "Turkish Airlines", code: "TK", bg: "from-rose-700 to-red-900" }
+];
+
+function renderHomePatti() {
+  const el = document.getElementById('home-airlines-patti');
+  if (!el) return;
+  const html = pattiAirlines.map(a => `
+    <a href="airlines.html" class="inline-flex items-center gap-2 bg-sky-50/90 hover:bg-blue-50 border border-sky-200/70 px-3 py-1 rounded-full shrink-0 transition">
+      <span class="w-5 h-5 rounded-full bg-gradient-to-br ${a.bg} text-white flex items-center justify-center text-[9px] font-extrabold">${a.code}</span>
+      <span class="text-xs font-extrabold text-brand-ink whitespace-nowrap">${a.name}</span>
+    </a>
+  `).join('');
+  el.innerHTML = html + html;
+}
+renderHomePatti();
   </script>
 </body>
 </html>
