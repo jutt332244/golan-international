@@ -1063,7 +1063,8 @@ const pattiAirlines = [
 ];
 
 function renderMainTickerMark(a) {
-      if (a.code === "PF") {
+      const isAirSial = a.code === "PF" || /airsial/i.test(a.name || "");
+      if (isAirSial) {
         return `
           <span class="inline-flex items-center justify-center h-9 w-11 rounded-lg bg-[#F0FDF4] border border-[#86EFAC] px-1.5 shrink-0" title="AirSial">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-label="AirSial logo">
@@ -1072,6 +1073,7 @@ function renderMainTickerMark(a) {
             </svg>
           </span>
         `;
+      }
       }
 
       const domainMap = {
