@@ -189,45 +189,56 @@
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
-  const airlinesList = [
-      { name: "PIA (Pakistan International Airlines)", short: "PIA", code: "PK", badge: "Pakistani Airline", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pakistan_International_Airlines_logo.svg/320px-Pakistan_International_Airlines_logo.svg.png" },
-      { name: "AirSial", short: "AirSial", code: "PF", badge: "Pakistani Airline", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/AirSial_logo.svg/320px-AirSial_logo.svg.png" },
-      { name: "Fly Jinnah", short: "Fly Jinnah", code: "9P", badge: "Domestic & International", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Fly_Jinnah_logo.svg/320px-Fly_Jinnah_logo.svg.png" },
-      { name: "Airblue", short: "Airblue", code: "PA", badge: "Domestic & Gulf", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Airblue_logo.svg/320px-Airblue_logo.svg.png" },
-      { name: "Emirates", short: "Emirates", code: "EK", badge: "International", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/320px-Emirates_logo.svg.png" },
-      { name: "Qatar Airways", short: "Qatar Airways", code: "QR", badge: "International", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/320px-Qatar_Airways_Logo.svg.png" },
-      { name: "Saudia", short: "Saudia", code: "SV", badge: "Gulf & Umrah", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Saudia_logo.svg/320px-Saudia_logo.svg.png" },
-      { name: "Etihad Airways", short: "Etihad Airways", code: "EY", badge: "International", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Etihad_Airways_Logo.svg/320px-Etihad_Airways_Logo.svg.png" },
-      { name: "flydubai", short: "flydubai", code: "FZ", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Flydubai_logo.svg/320px-Flydubai_logo.svg.png" },
-      { name: "Gulf Air", short: "Gulf Air", code: "GF", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gulf_Air_logo.svg/320px-Gulf_Air_logo.svg.png" },
-      { name: "Oman Air", short: "Oman Air", code: "WY", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Oman_Air_logo.svg/320px-Oman_Air_logo.svg.png" },
-      { name: "Air Arabia", short: "Air Arabia", code: "G9", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Air_Arabia_logo.svg/320px-Air_Arabia_logo.svg.png" },
-      { name: "Kuwait Airways", short: "Kuwait Airways", code: "KU", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kuwait_Airways_logo.svg/320px-Kuwait_Airways_logo.svg.png" },
-      { name: "Jazeera Airways", short: "Jazeera", code: "J9", badge: "Gulf Corridor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Jazeera_Airways_logo.svg/320px-Jazeera_Airways_logo.svg.png" },
-      { name: "Riyadh Air", short: "Riyadh Air", code: "RX", badge: "Saudi & Global", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Riyadh_Air_logo.svg/320px-Riyadh_Air_logo.svg.png" },
-      { name: "Turkish Airlines", short: "Turkish Airlines", code: "TK", badge: "International", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Turkish_Airlines_logo_2019_compact.svg/320px-Turkish_Airlines_logo_2019_compact.svg.png" },
-      { name: "British Airways", short: "British Airways", code: "BA", badge: "UK & Europe", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/British_Airways_Logo.svg/320px-British_Airways_Logo.svg.png" },
-      { name: "Virgin Atlantic", short: "Virgin Atlantic", code: "VS", badge: "UK & Europe", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Virgin_Atlantic_logo.svg/320px-Virgin_Atlantic_logo.svg.png" },
-      { name: "Thai Airways", short: "Thai Airways", code: "TG", badge: "Asia", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/25/Thai_Airways_Logo.svg/320px-Thai_Airways_Logo.svg.png" },
-      { name: "Singapore Airlines", short: "Singapore Airlines", code: "SQ", badge: "Asia", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Singapore_Airlines_Logo_2.svg/320px-Singapore_Airlines_Logo_2.svg.png" },
-      { name: "Lufthansa", short: "Lufthansa", code: "LH", badge: "Europe & Global", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lufthansa_Logo_2018.svg/320px-Lufthansa_Logo_2018.svg.png" },
-      { name: "Qantas", short: "Qantas", code: "QF", badge: "International", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Qantas_logo_2016.svg/320px-Qantas_logo_2016.svg.png" },
-      { name: "Cathay Pacific", short: "Cathay Pacific", code: "CX", badge: "Asia & Global", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Cathay_Pacific_logo.svg/320px-Cathay_Pacific_logo.svg.png" },
-      { name: "Malaysia Airlines", short: "Malaysia Airlines", code: "MH", badge: "Malaysia & Asia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Malaysia_Airlines_logo.svg/320px-Malaysia_Airlines_logo.svg.png" },
-      { name: "IndiGo", short: "IndiGo", code: "6E", badge: "South Asia & Gulf", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IndiGo_Airlines_logo.svg/320px-IndiGo_Airlines_logo.svg.png" },
-      { name: "Air France", short: "Air France", code: "AF", badge: "Europe & Global", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/320px-Air_France_Logo.svg.png" },
-      { name: "KLM", short: "KLM", code: "KL", badge: "Europe & Global", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KLM_logo.svg/320px-KLM_logo.svg.png" },
-      { name: "SWISS", short: "SWISS", code: "LX", badge: "Europe & Global", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Swiss_International_Air_Lines_logo_2011.svg/320px-Swiss_International_Air_Lines_logo_2011.svg.png" }
+ const airlinesList = [
+      { name: "PIA (Pakistan International Airlines)", short: "PIA", code: "PK", badge: "Pakistani Airline", accent: "#01411C", softBg: "#ECFDF5", border: "#A7F3D0", mark: "wing" },
+      { name: "AirSial", short: "AirSial", code: "PF", badge: "Pakistani Airline", accent: "#005A32", softBg: "#F0FDF4", border: "#BBF7D0", mark: "star" },
+      { name: "Fly Jinnah", short: "Fly Jinnah", code: "9P", badge: "Domestic & International", accent: "#E11D48", softBg: "#FFF1F2", border: "#FECDD3", mark: "fj" },
+      { name: "Airblue", short: "Airblue", code: "PA", badge: "Domestic & Gulf", accent: "#1D4ED8", softBg: "#EFF6FF", border: "#BFDBFE", mark: "jet" },
+      { name: "Emirates", short: "Emirates", code: "EK", badge: "International", accent: "#C8102E", softBg: "#FEF2F2", border: "#FECACA", mark: "callig" },
+      { name: "Qatar Airways", short: "Qatar Airways", code: "QR", badge: "International", accent: "#5C0632", softBg: "#FDF2F8", border: "#FBCFE8", mark: "oryx" },
+      { name: "Saudia", short: "Saudia", code: "SV", badge: "Gulf & Umrah", accent: "#006C35", softBg: "#ECFDF5", border: "#A7F3D0", mark: "palm" },
+      { name: "Etihad Airways", short: "Etihad Airways", code: "EY", badge: "International", accent: "#B48A24", softBg: "#FFFBEB", border: "#FDE68A", mark: "crest" },
+      { name: "flydubai", short: "flydubai", code: "FZ", badge: "Gulf Corridor", accent: "#0073CF", softBg: "#F0F9FF", border: "#BAE6FD", mark: "jet" },
+      { name: "Gulf Air", short: "Gulf Air", code: "GF", badge: "Gulf Corridor", accent: "#002B5C", softBg: "#EFF6FF", border: "#BFDBFE", mark: "falcon" },
+      { name: "Oman Air", short: "Oman Air", code: "WY", badge: "Gulf Corridor", accent: "#0F3D5E", softBg: "#F0F9FF", border: "#BAE6FD", mark: "wave" },
+      { name: "Air Arabia", short: "Air Arabia", code: "G9", badge: "Gulf Corridor", accent: "#D91E2A", softBg: "#FEF2F2", border: "#FECACA", mark: "seagull" },
+      { name: "Kuwait Airways", short: "Kuwait Airways", code: "KU", badge: "Gulf Corridor", accent: "#003366", softBg: "#EFF6FF", border: "#BFDBFE", mark: "wing" },
+      { name: "Jazeera Airways", short: "Jazeera", code: "J9", badge: "Gulf Corridor", accent: "#0085CA", softBg: "#F0F9FF", border: "#BAE6FD", mark: "jet" },
+      { name: "Riyadh Air", short: "Riyadh Air", code: "RX", badge: "Saudi & Global", accent: "#4B1D78", softBg: "#F5F3FF", border: "#DDD6FE", mark: "arch" },
+      { name: "Turkish Airlines", short: "Turkish Airlines", code: "TK", badge: "International", accent: "#C70A0C", softBg: "#FEF2F2", border: "#FECACA", mark: "moon" },
+      { name: "British Airways", short: "British Airways", code: "BA", badge: "UK & Europe", accent: "#075AAA", softBg: "#EFF6FF", border: "#BFDBFE", mark: "ribbon" },
+      { name: "Virgin Atlantic", short: "Virgin Atlantic", code: "VS", badge: "UK & Europe", accent: "#E10A0A", softBg: "#FFF1F2", border: "#FECDD3", mark: "script" },
+      { name: "Thai Airways", short: "Thai Airways", code: "TG", badge: "Asia", accent: "#4B166D", softBg: "#FAF5FF", border: "#E9D5FF", mark: "orchid" },
+      { name: "Singapore Airlines", short: "Singapore Airlines", code: "SQ", badge: "Asia", accent: "#E59819", softBg: "#FFFBEB", border: "#FDE68A", mark: "bird" },
+      { name: "Lufthansa", short: "Lufthansa", code: "LH", badge: "Europe & Global", accent: "#05164D", softBg: "#EFF6FF", border: "#BFDBFE", mark: "crane" },
+      { name: "Qantas", short: "Qantas", code: "QF", badge: "International", accent: "#E0001B", softBg: "#FEF2F2", border: "#FECACA", mark: "tail" },
+      { name: "Cathay Pacific", short: "Cathay Pacific", code: "CX", badge: "Asia & Global", accent: "#006564", softBg: "#F0FDFA", border: "#99F6E4", mark: "brush" },
+      { name: "Malaysia Airlines", short: "Malaysia Airlines", code: "MH", badge: "Malaysia & Asia", accent: "#010080", softBg: "#EFF6FF", border: "#C7D2FE", mark: "kite" },
+      { name: "IndiGo", short: "IndiGo", code: "6E", badge: "South Asia & Gulf", accent: "#1D2B8B", softBg: "#EEF2FF", border: "#C7D2FE", mark: "dots" },
+      { name: "Air France", short: "Air France", code: "AF", badge: "Europe & Global", accent: "#002157", softBg: "#EFF6FF", border: "#BFDBFE", mark: "strut" },
+      { name: "KLM", short: "KLM", code: "KL", badge: "Europe & Global", accent: "#00A1E4", softBg: "#F0F9FF", border: "#BAE6FD", mark: "crown" },
+      { name: "SWISS", short: "SWISS", code: "LX", badge: "Europe & Global", accent: "#E2001A", softBg: "#FEF2F2", border: "#FECACA", mark: "cross" }
     ];
+
+    function renderAirlineMark(a) {
+      return `
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border shadow-2xs" style="border-color:${a.border};">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="shrink-0" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="${a.softBg}" stroke="${a.border}" stroke-width="1.2"/>
+            <path d="M4 14.5C8.5 13.5 13 10.5 19.5 7.5" stroke="${a.accent}" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M10.5 12.2L13.5 7.5L15.8 7.8L14.2 11.4L18.5 10.8L19.5 12.3L12.5 14.4L10.5 12.2Z" fill="${a.accent}"/>
+            <circle cx="6.2" cy="9.2" r="2" fill="${a.accent}" opacity="0.85"/>
+          </svg>
+          <span class="text-xs sm:text-sm font-black tracking-tight whitespace-nowrap" style="color:${a.accent};">${a.short}</span>
+        </span>
+      `;
+    }
 
     function renderTicker() {
       const track = document.getElementById('airlines-ticker-track');
       const itemsHtml = airlinesList.map(a => `
         <a href="https://wa.me/923453326318?text=${encodeURIComponent('Assalam-o-Alaikum Golan International, I need ticket fare/booking for *' + a.name + '*.')}" target="_blank" class="inline-flex items-center gap-3.5 bg-white hover:bg-sky-50/70 border border-sky-200/80 px-5 py-3 rounded-2xl shadow-2xs shrink-0 transition">
-          <span class="h-10 w-32 flex items-center justify-center overflow-hidden shrink-0">
-            <img src="${a.logo}" alt="${a.short}" loading="lazy" class="max-h-9 max-w-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
-            <span style="display:none;" class="items-center gap-1 text-xs font-extrabold text-blue-800">${a.short}</span>
-          </span>
+          ${renderAirlineMark(a)}
           <span class="h-7 w-px bg-sky-100 shrink-0"></span>
           <span class="leading-tight text-left whitespace-nowrap">
             <span class="block text-sm font-extrabold text-brand-ink">${a.short}</span>
@@ -250,9 +261,8 @@
                 <span class="text-xs font-extrabold text-slate-400">${a.code}</span>
               </div>
               <div class="flex items-center gap-3.5">
-                <div class="h-12 w-28 rounded-2xl bg-white border border-sky-100 px-2.5 flex items-center justify-center shrink-0">
-                  <img src="${a.logo}" alt="${a.short}" loading="lazy" class="max-h-9 max-w-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
-                  <span style="display:none;" class="text-xs font-extrabold text-blue-800">${a.short}</span>
+                <div class="shrink-0">
+                  ${renderAirlineMark(a)}
                 </div>
                 <h3 class="text-base font-extrabold text-brand-ink leading-snug">${a.name}</h3>
               </div>
