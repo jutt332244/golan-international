@@ -1062,25 +1062,80 @@ const pattiAirlines = [
   }
 ];
 
-function renderHomePatti() {
-  const el = document.getElementById('home-airlines-patti');
-  if (!el) return;
-  const html = pattiAirlines.map(a => `
-    <a href="airlines.html" class="group inline-flex items-center gap-3 bg-white hover:bg-sky-50/60 border border-slate-200/80 hover:border-sky-300 px-4 py-2 rounded-2xl shadow-2xs shrink-0 transition-all duration-300">
-      <span class="h-8 w-24 flex items-center justify-center overflow-hidden shrink-0">
-        <img src="${a.logo}" alt="${a.name}" loading="lazy" class="max-h-7 max-w-full object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
-        <span style="display:none;" class="text-xs font-extrabold ${a.color}">${a.name}</span>
-      </span>
-      <span class="h-6 w-px bg-slate-200/80 shrink-0"></span>
-      <span class="leading-tight text-left whitespace-nowrap">
-        <span class="block text-xs font-extrabold ${a.color}">${a.name}</span>
-        <span class="block text-[10px] font-medium text-slate-400">${a.sub}</span>
-      </span>
-    </a>
-  `).join('');
-  el.innerHTML = html + html;
-}
-renderHomePatti();
+function renderMainTickerMark(a) {
+      if (a.code === "PF") {
+        return `
+          <span class="inline-flex items-center justify-center h-9 w-11 rounded-lg bg-[#F0FDF4] border border-[#86EFAC] px-1.5 shrink-0" title="AirSial">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-label="AirSial logo">
+              <polygon points="16,3 19.6,11.2 28.5,12 21.7,17.8 23.8,26.6 16,21.9 8.2,26.6 10.3,17.8 3.5,12 12.4,11.2" fill="#006837"/>
+              <polygon points="16,7.5 18.2,12.6 23.7,13.1 19.5,16.7 20.8,22.1 16,19.2 11.2,22.1 12.5,16.7 8.3,13.1 13.8,12.6" fill="#C59B27"/>
+            </svg>
+          </span>
+        `;
+      }
+
+      const domainMap = {
+        "PIA": "piac.com.pk",
+        "AirSial": "airsial.com",
+        "Fly Jinnah": "flyjinnah.com",
+        "Airblue": "airblue.com",
+        "Emirates": "emirates.com",
+        "Qatar Airways": "qatarairways.com",
+        "Saudia": "saudia.com",
+        "Etihad Airways": "etihad.com",
+        "flydubai": "flydubai.com",
+        "Gulf Air": "gulfair.com",
+        "Oman Air": "omanair.com",
+        "Air Arabia": "airarabia.com",
+        "Kuwait Airways": "kuwaitairways.com",
+        "Jazeera Airways": "jazeeraairways.com",
+        "Riyadh Air": "riyadhair.com",
+        "Turkish Airlines": "turkishairlines.com",
+        "British Airways": "ba.com",
+        "Virgin Atlantic": "virginatlantic.com",
+        "Thai Airways": "thaiairways.com",
+        "Singapore Airlines": "singaporeair.com",
+        "Lufthansa": "lufthansa.com",
+        "Qantas": "qantas.com",
+        "Cathay Pacific": "cathaypacific.com",
+        "Malaysia Airlines": "malaysiaairlines.com",
+        "IndiGo": "goindigo.in",
+        "Air France": "airfrance.com",
+        "KLM": "klm.com",
+        "SWISS": "swiss.com",
+        "Batik Air": "batikair.com",
+        "China Southern": "csair.com"
+      };
+
+      const domain = a.domain || domainMap[a.name] || "";
+      const logoUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : (a.logo || "");
+      const fallbackCode = a.code || (a.name || "AL").slice(0, 2).toUpperCase();
+
+      return `
+        <span class="inline-flex items-center justify-center h-9 w-11 rounded-lg bg-white border border-sky-200/80 px-1.5 shrink-0">
+          <img src="${logoUrl}" alt="${a.name} logo" loading="lazy" class="h-6 w-6 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+          <span style="display:none;" class="text-[11px] font-black ${a.color || 'text-blue-900'}">${fallbackCode}</span>
+        </span>
+      `;
+    }
+
+    function renderHomePatti() {
+      const el = document.getElementById('home-airlines-patti');
+      if (!el) return;
+      const filteredList = pattiAirlines.filter(a => !/serene\s*air/i.test(a.name || ""));
+      const html = filteredList.map(a => `
+        <a href="airlines.html" class="group inline-flex items-center gap-2.5 bg-white hover:bg-sky-50/60 border border-slate-200/80 hover:border-sky-300 px-3.5 py-2 rounded-2xl shadow-2xs shrink-0 transition-all duration-300">
+          ${renderMainTickerMark(a)}
+          <span class="h-6 w-px bg-slate-200/80 shrink-0"></span>
+          <span class="leading-tight text-left whitespace-nowrap">
+            <span class="block text-xs font-extrabold ${a.color || 'text-brand-ink'}">${a.name}</span>
+            <span class="block text-[10px] font-medium text-slate-600">${a.sub || ''}</span>
+          </span>
+        </a>
+      `).join('');
+      el.innerHTML = html + html;
+    }
+    renderHomePatti();
   </script>
 </body>
 </html>
