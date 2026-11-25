@@ -76,6 +76,45 @@
 .airline-ticker-track:hover {
   animation-play-state: paused;
 }
+    /* 1. Buttery Smooth Page Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Airline Patti Ke Kinaron Par Soft Fade Effect */
+.overflow-hidden.flex-1 {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+/* 3. Cards Aur Package Boxes Ko Smooth Lift & Glow Dena */
+.soft-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease !important;
+}
+.soft-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 35px -12px rgba(2, 132, 199, 0.16) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+/* 4. Buttons Par Click & Hover Feel */
+a[class*="bg-blue-600"],
+button[class*="bg-blue-600"] {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.25s ease,
+              box-shadow 0.25s ease !important;
+}
+a[class*="bg-blue-600"]:hover,
+button[class*="bg-blue-600"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -6px rgba(37, 99, 235, 0.45);
+}
+a[class*="bg-blue-600"]:active,
+button[class*="bg-blue-600"]:active {
+  transform: scale(0.97);
+}
   </style>
 </head>
 <body class="bg-[#F7FAFF] text-brand-ink font-sans antialiased selection:bg-sky-600 selection:text-white">
