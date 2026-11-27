@@ -44,8 +44,9 @@
       width: 340px;
       height: 340px;
       border-radius: 9999px;
-      background: rgba(125, 211, 252, 0.28);
-      filter: blur(48px);
+      background: radial-gradient(circle, rgba(125, 211, 252, 0.34) 0%, rgba(125, 211, 252, 0) 70%);
+  filter: blur(22px);
+
       pointer-events: none;
     }
     .soft-blob-2 {
@@ -55,14 +56,13 @@
       width: 320px;
       height: 320px;
       border-radius: 9999px;
-      background: rgba(165, 243, 252, 0.35);
-      filter: blur(52px);
+      background: radial-gradient(circle, rgba(165, 243, 252, 0.38) 0%, rgba(165, 243, 252, 0) 70%);
+  filter: blur(24px);
       pointer-events: none;
     }
     .soft-card {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 12px 32px -12px rgba(37, 99, 235, 0.12);
+     background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 10px 26px -14px rgba(15, 23, 42, 0.12), 0 4px 12px -6px rgba(37, 99, 235, 0.08);
     }
     @keyframes tickerMove {
   0% { transform: translateX(0%); }
@@ -72,6 +72,7 @@
   display: flex;
   width: max-content;
   animation: tickerMove 200s linear infinite;
+  will-change: transform;
 }
 .airline-ticker-track:hover {
   animation-play-state: paused;
